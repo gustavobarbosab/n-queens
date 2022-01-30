@@ -1,12 +1,10 @@
 package hillClimbing
 
-class HillClimbing(
-    var initialBoard: Board,
-    var numberOfIterations : Int = 10000000,
+class HillClimbingSolver(
+    var initialBoard: HillClimbingBoard,
+    var numberOfIterations: Int = 10000000,
 ) {
-
-    fun run() {
-
+    fun solve() {
         var currentBoard = initialBoard.getBoard()
         var haveSolution = false
 

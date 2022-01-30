@@ -1,4 +1,4 @@
-package factory
+package depthsearch
 
 object BoardCreator {
 

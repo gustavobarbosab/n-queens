@@ -1,16 +1,16 @@
 package simulatedAnnealing
 
-import hillClimbing.Board
+import hillClimbing.HillClimbingBoard
 import kotlin.random.Random
 
-class SimulatedAnnealing(
-    var initialBoard: Board,
-    var numberOfIterations : Int = 10000000,
-    var initialTemperature : Int = 2000,
+class SimulatedAnnealingSolver(
+    var initialBoard: HillClimbingBoard,
     var temperatureReductionFactor : Double = 0.99,
+    var initialTemperature : Int = 2000,
+    var numberOfIterations : Int = 10000000,
 ) {
 
-    fun run() {
+    fun solve() {
 
         var temperature = initialTemperature.toDouble()
         var currentBoard = initialBoard.getBoard()
